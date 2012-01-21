@@ -18,6 +18,7 @@ public class DriveWithJoystick extends CommandBase {
     {
         mech = Drive.getInstance();
         requires(mech);
+        System.out.println("DrvWthJystkInit");
     }
 
     // Called just before this Command runs the first time

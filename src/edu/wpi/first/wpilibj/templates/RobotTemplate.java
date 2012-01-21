@@ -25,6 +25,7 @@ import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
 public class RobotTemplate extends IterativeRobot {
 
     Command autonomousCommand;
+    
 
     /**
      * This function is run when the robot is first started up and should be
@@ -36,6 +37,7 @@ public class RobotTemplate extends IterativeRobot {
 
         // Initialize all subsystems
         CommandBase.init();
+        
     }
 
     public void autonomousInit() {

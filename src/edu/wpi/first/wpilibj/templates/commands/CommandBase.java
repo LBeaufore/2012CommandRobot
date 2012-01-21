@@ -3,6 +3,7 @@ package edu.wpi.first.wpilibj.templates.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.templates.OI;
+import edu.wpi.first.wpilibj.templates.subsystems.Drive;
 import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
 
 /**
@@ -14,6 +15,7 @@ import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
 public abstract class CommandBase extends Command {
 
     public static OI oi;
+    public static Drive drive;
     // Create a single static instance of all of your subsystems
     public static ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 
@@ -24,6 +26,8 @@ public abstract class CommandBase extends Command {
         // yet. Thus, their requires() statements may grab null pointers. Bad
         // news. Don't move it.
         oi = OI.getInstance();
+        drive = Drive.getInstance();
+        System.out.println("Got an instance of drive:" + drive.getName());
 
         // Show what command your subsystem is running on the SmartDashboard
         SmartDashboard.putData(exampleSubsystem);
